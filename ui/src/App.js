@@ -8,9 +8,11 @@ function App() {
     <Container maxWidth="sm">
       <Stack spacing={3}>
         <Typography variant="h3">An awesome quiz app</Typography>
-        <Button variant="contained" onClick={() => setHasStarted(true)}>
-          Start quiz
-        </Button>
+        {hasStarted ? null : (
+          <Button variant="contained" onClick={() => setHasStarted(true)}>
+            Start quiz
+          </Button>
+        )}
 
         <Typography variant="caption">
           Built by Bac, Andrew, Mei and Tin
