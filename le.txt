@@ -1,0 +1,3 @@
+I created this file to test my Git capabilities.
+
+Git essentially is a tool used to allow coding collaborations as well as manage it so that there are no coding conflicts. It seems simple but I'm sure there are more flags and the syntax will get more sophisticated as I dive deeper into it. Hopefully this can be seen on my branch. Maybe for the third time, this can be seen.
