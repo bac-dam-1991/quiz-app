@@ -2,14 +2,15 @@ import { Button, Typography, Container, Stack } from "@mui/material";
 import { useState } from "react";
 
 function App() {
-  const [hasStarted, setHasStarted] = useState(false);
+  // appState can be "started" | "finished"
+  const [appState, setAppState] = useState();
 
   return (
     <Container maxWidth="sm">
       <Stack spacing={3}>
         <Typography variant="h3">An awesome quiz app</Typography>
-        {hasStarted ? null : (
-          <Button variant="contained" onClick={() => setHasStarted(true)}>
+        {appState === "started" ? null : (
+          <Button variant="contained" onClick={() => setAppState("started")}>
             Start quiz
           </Button>
         )}
