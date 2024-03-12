@@ -1,0 +1,4 @@
+git is a form of version control
+its a critical tool to collaborate and work with other programmers
+it allows you to commit saves points, and therefore undo mistakes and revrt to older states, pull changes from a remote branch, checkout other branches etcgi
+
