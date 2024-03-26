@@ -1,5 +1,6 @@
 import { Button, Typography, Container, Stack } from "@mui/material";
 import { useState } from "react";
+import { QuizPage } from "./pages/QuizPage";
 
 function App() {
   // appState can be "started" | "finished"
@@ -9,7 +10,9 @@ function App() {
     <Container maxWidth="sm">
       <Stack spacing={3}>
         <Typography variant="h3">An awesome quiz app</Typography>
-        {appState === "started" ? null : (
+        {appState === "started" ? (
+          <QuizPage />
+        ) : (
           <Button variant="contained" onClick={() => setAppState("started")}>
             Start quiz
           </Button>
