@@ -302,10 +302,19 @@ function Example() {
 }
 ```
 
-# Lecture 8
+# Lecture 8: Variable and scope
 
-- Why learn legacy code?
-- React Dom render
-- Class components
-- Javascript syntax
-  - async functions
+Scope is visibility.
+
+```javascript
+const rdj = "Robert Downey Jnr";
+
+const myHouse = () => {
+  const me = "Sad old me";
+  console.log("Everyone in my house knows", rdj);
+  console.log("Everyone in my house knows", me);
+};
+
+console.log("Everyone in the world knows", rdj);
+console.log("No one in the world knows", me); // Throws ReferenceError
+```
