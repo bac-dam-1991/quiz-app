@@ -1,7 +1,7 @@
 import { Button, Typography, Container, Stack } from "@mui/material";
 import { useState } from "react";
 import { QuizPage } from "./pages/QuizPage";
-import ResultPage from "./pages/ResultPage";
+import { ResultPage } from "./pages/ResultPage";
 
 function App() {
   const [appState, setAppState] = useState();
@@ -28,4 +28,3 @@ function App() {
 }
 
 export default App;
-
