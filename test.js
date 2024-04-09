@@ -18,6 +18,7 @@ console.log("person.firstName", person.firstName); // 1 x John, 2 x Jane
 // 2. Visually draw what happens
 const person02 = person01;
 
+person.name = "Jill";
 person02.name = "Jack";
 console.log("person.name", person.name);
 console.log("person02.name", person02.name);
