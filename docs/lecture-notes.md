@@ -318,3 +318,101 @@ const myHouse = () => {
 console.log("Everyone in the world knows", rdj);
 console.log("No one in the world knows", me); // Throws ReferenceError
 ```
+
+# Lecture 9: Passing by reference or passing by value
+
+## Primitives
+
+- `string`
+- `number`
+  - Other languages may have more discrete number types, e.g., int, float, double
+- `boolean`
+- `null`
+- `undefined`
+
+```javascript
+// Instantiation
+let age;
+
+// This is the same as
+// let age = undefined;
+
+// Initialisation
+age = 42;
+
+// Instantiation and initialisation
+let age = 42;
+```
+
+## Non-primitives (complex data types)
+
+- Object (JSON)
+- Classes
+- Functions
+
+```javascript
+const name = "Robert";
+const age = 42;
+const gender = "M";
+
+const person = {
+  name: "Robert",
+  age: 42,
+  gender: "M",
+  address: {
+    streetName: "Fake",
+    streetType: "St",
+    suburb: "Neverland",
+  },
+};
+
+console.log(person.name); // "Robert"
+console.log(person.age); // 42
+console.log(person.address.streetName); // "Fake"
+```
+
+## Exercise
+
+Create a person object with attributes about you:
+
+- name, first name, last name
+- age,
+- address
+
+## Tin
+
+```javascript
+const tin = {
+  name: "Tin",
+  age: 20,
+  gender: "M",
+  attributes: {
+    handedness: "R",
+    iq: "500",
+  },
+};
+```
+
+## Mei
+
+```javascript
+const mei = {
+  name: "Mei",
+  age: 32,
+  address: { streetName: "Sesame", streetType: "St", suburb: "Garbage" },
+};
+```
+
+## Andrew
+
+```javascript
+const Andrew = {
+  name: "Andrew";
+  age: 31;
+  address {
+    streetName: "Jull";
+    streetType: "Parade";
+    suburb: "Ringwood";
+  }
+};
+```
