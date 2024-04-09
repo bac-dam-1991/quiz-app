@@ -21,3 +21,7 @@ const person02 = person01;
 person02.name = "Jack";
 console.log("person.name", person.name);
 console.log("person02.name", person02.name);
+
+// To run this code: node test
+// To view the diagram, make sure the Draw.io Integration extension by Henning Dieterichs is installed
+// Click on the file, it should open the diagram in draw.io
