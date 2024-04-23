@@ -1,16 +1,15 @@
-import { Typography } from "@mui/material";
 import {Fragment} from "react";
 
 export const QuizPage = () => {
-  return 
+  return (
 
   <Fragment>
 
-  <img></img>
+  <img alt=""></img>
   
   <main>
     <h1>Question 1 of 10</h1>
-    <p>What will be the value of "result" after executing the following code?</p>
+    <p class="question">What will be the value of "result" after executing the following code?</p>
     <ul>
       <li>let x = 10;</li>
       <li>let y = 5;</li>
@@ -38,5 +37,5 @@ export const QuizPage = () => {
   </div>
   
   </Fragment>
-  ;
+  );
 };
