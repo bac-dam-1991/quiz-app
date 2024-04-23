@@ -1,4 +1,4 @@
-function ResultPage() {
+export function ResultPage() {
   return (
     <>
       <h1>Good Job!</h1>
@@ -24,5 +24,3 @@ function ResultPage() {
     </>
   );
 }
-
-export default ResultPage;
