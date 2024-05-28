@@ -2,14 +2,27 @@ import { useState } from "react";
 import { Fragment } from "react";
 import "./QuizPage.css";
 
-export const QuizPage = () => {
+const Answers = [
+  {
+    label: "10",
+    value: "a1",
+  },
+  {
+    label: "5",
+    value: "a2",
+  },
+  {
+    label: "x is greater",
+    value: "a3",
+  },
+  {
+    label: "y is greater",
+    value: "a4",
+  },
+];
 
+export const QuizPage = () => {
   const [selected, setSelected] = useState(0);
-  
-  const selectAnswer = (answer) => {
-    setSelected(answer);
-    console.log(answer);
-  }
 
   return (
     <Fragment>
@@ -27,21 +40,18 @@ export const QuizPage = () => {
         </ul>
 
         <div className="answers">
-          <button name="a1" className={selected === "a1" ? "button-selected" : ""} onClick={() => selectAnswer("a1")}>
-            <p>10</p>
-          </button>
-
-          <button name="a2" className={selected === "a2" ? "button-selected" : ""} onClick={() => selectAnswer("a2")}>
-            <p>5</p>
-          </button>
-
-          <button name="a3" className={selected === "a3" ? "button-selected" : ""} onClick={() => selectAnswer("a3")}>
-            <p>"x is greater"</p>
-          </button>
-
-          <button name="a4" className={selected === "a4" ? "button-selected" : ""} onClick={() => selectAnswer("a4")}>
-            <p>"y is greater"</p>
-          </button>
+          {Answers.map((answer) => {
+            return (
+              <button
+                key={answer.value}
+                name={answer.value}
+                className={selected === answer.value ? "button-selected" : ""}
+                onClick={() => setSelected(answer.value)}
+              >
+                {answer.label}
+              </button>
+            );
+          })}
         </div>
       </main>
     </Fragment>
