@@ -18,9 +18,9 @@ ul {
 }
 
 .answers {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 button {
@@ -30,6 +30,7 @@ button {
   border-radius: 10px;
   padding: 0.1rem 1rem;
   cursor: pointer;
+  padding: 12px;
 }
 
 button:hover {
@@ -45,4 +46,3 @@ button:hover {
 p {
   text-align: left;
 }
-
