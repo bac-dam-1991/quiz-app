@@ -2,6 +2,7 @@ import { Button, Typography, Container, Stack } from "@mui/material";
 import { useState } from "react";
 import { QuizPage } from "./pages/QuizPage";
 import { ResultPage } from "./pages/ResultPage";
+import "./App.css"
 
 function App() {
   const [appState, setAppState] = useState();
