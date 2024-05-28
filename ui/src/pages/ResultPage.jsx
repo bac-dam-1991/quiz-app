@@ -1,24 +1,35 @@
+import "./ResultPage.css";
+import React, { useState } from "react";
+
 export function ResultPage() {
+  const [state, setState] = useState(0);
   return (
     <>
-      <h1>Good Job!</h1>
       <header>
-        <img src="" alt="" />
+        <h1>Good Job!</h1>
+        <img src="#" alt="happy face" />
       </header>
       <main>
-        <div className="correct"></div>
-        <h3>correct</h3>
-        <div className="correct-box"></div>
-        <div className="incorrect">
-          <h3>incorrect</h3>
-          <div className="incorrect-box"></div>
+        <div class="output-container">
+            <div class="correct-container">
+                <h3>correct</h3>
+                <div class="correct-box">
+                    <h5>8</h5>
+                </div>
+            </div>
+            <div class="incorrect-container">
+                <h3>incorrect</h3>
+                <div class="incorrect-box">
+                    <h5>2</h5>
+                </div>
+            </div>
         </div>
-        <div className="score">
-          <h3>score</h3>
-          <h1>80%</h1>
-          {/* this would return 80%? use static placeholder for now? */}
+        <div class="score-container">
+            <h3>score</h3>
+            <div class="blue-score-box">
+                <h1>80%</h1>
+            </div>
         </div>
-
         <button id="done-button">Done</button>
       </main>
     </>
