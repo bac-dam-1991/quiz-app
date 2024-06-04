@@ -416,3 +416,8 @@ const Andrew = {
   }
 };
 ```
+
+## Terminologies
+
+Function: method, callback, predicate,
+Variable: constant, argument, parameter
