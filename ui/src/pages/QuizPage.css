@@ -43,6 +43,14 @@ button:hover {
   color: black;
 }
 
+.correct-answer {
+  background-color: greenyellow;
+}
+
+.wrong-answer {
+  background-color: red;
+}
+
 p {
   text-align: left;
 }

@@ -2,36 +2,37 @@ import { useState } from "react";
 import { Fragment } from "react";
 import "./QuizPage.css";
 
-const Answers = [
-  {
-    label: "10",
-    value: "a1",
-  },
-  {
-    label: "5",
-    value: "a2",
-  },
-  {
-    label: "x is greater",
-    value: "a3",
-  },
-  {
-    label: "y is greater",
-    value: "a4",
-  },
-];
+// const Answers = [
+//   {
+//     label: "10",
+//     value: "a1",
+//   },
+//   {
+//     label: "5",
+//     value: "a2",
+//   },
+//   {
+//     label: "x is greater",
+//     value: "a3",
+//   },
+//   {
+//     label: "y is greater",
+//     value: "a4",
+//   },
+// ];
 
 export const QuizPage = () => {
   const [selected, setSelected] = useState(0);
+  const [questionNumber, setQuestionNumber] = useState(0);
 
   return (
     <Fragment>
       <img alt=""></img>
 
       <main>
-        <h1>Question 1 of 10</h1>
+        <h1>Question {questionNumber +1} of {Questions.length}</h1>
         <p className="question">
-          What will be the value of "result" after executing the following code?
+          {Questions[questionNumber].question}
         </p>
         <ul>
           <li>let x = 10;</li>
@@ -40,12 +41,12 @@ export const QuizPage = () => {
         </ul>
 
         <div className="answers">
-          {Answers.map((answer) => {
+          {Questions[questionNumber].options.map((answer) => {
             return (
               <button
                 key={answer.value}
                 name={answer.value}
-                className={selected === answer.value ? "button-selected" : ""}
+                className={selected === answer.value && selected === Questions[questionNumber].answer ? "correct-answer" : selected === answer.value && selected !== Questions[questionNumber].answer ? "wrong-answer" : ""}
                 onClick={() => setSelected(answer.value)}
               >
                 {answer.label}
@@ -53,6 +54,10 @@ export const QuizPage = () => {
             );
           })}
         </div>
+
+        <button onClick={() => setQuestionNumber(questionNumber + 1)}>
+          Next Question
+        </button>
       </main>
     </Fragment>
   );
