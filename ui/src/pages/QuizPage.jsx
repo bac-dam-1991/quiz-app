@@ -2,25 +2,6 @@ import { useState } from "react";
 import { Fragment } from "react";
 import "./QuizPage.css";
 
-// const Answers = [
-//   {
-//     label: "10",
-//     value: "a1",
-//   },
-//   {
-//     label: "5",
-//     value: "a2",
-//   },
-//   {
-//     label: "x is greater",
-//     value: "a3",
-//   },
-//   {
-//     label: "y is greater",
-//     value: "a4",
-//   },
-// ];
-
 export const QuizPage = () => {
   const [selected, setSelected] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -34,11 +15,6 @@ export const QuizPage = () => {
         <p className="question">
           {Questions[questionNumber].question}
         </p>
-        <ul>
-          <li>let x = 10;</li>
-          <li>let y = 5;</li>
-          <li>let result = x &gt; y ? "x is greater" : "y is greater";</li>
-        </ul>
 
         <div className="answers">
           {Questions[questionNumber].options.map((answer) => {
