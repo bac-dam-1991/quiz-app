@@ -44,7 +44,12 @@ export const QuizPage = () => {
           })}
         </div>
 
-        <button onClick={() => setQuestionNumber(questionNumber + 1)}>
+        <button
+          onClick={() => {
+            setSelected(0);
+            setQuestionNumber(questionNumber + 1);
+          }}
+        >
           Next Question
         </button>
       </main>
